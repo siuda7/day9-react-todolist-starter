@@ -12,7 +12,10 @@ const TodoGenerator = () => {
     }
 
     const handleAdd = () => {
-        dispatch({type: 'ADD', text: text})
+        if (text !== '') {
+            dispatch({type: 'ADD', text: text})
+            setText('')
+        }
     }
 
     return (

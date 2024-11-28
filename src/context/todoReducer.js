@@ -1,15 +1,15 @@
 export const initialState = [
-  {id: Date.now(), text: "the first todo", done: false},
-  {id: Date.now(), text: "the second todo", done: false},
+  {id: Math.random(), text: "the first todo", done: false},
+  {id: Math.random(), text: "the second todo", done: false},
 ];
 
 export const todoReducer = (state, action) => {
 
-  const {type, text} = action
-
-  switch (type) {
+  switch (action.type) {
     case 'ADD':
-      return [...state, {id: Math.random(), text: text, done: false}]
+      return [...state, {id: Math.random(), text: action.text, done: false}]
+    case 'DELETE':
+      return [...state.filter((todo) => todo.id !== action.id)]
     default:
       return state
   }

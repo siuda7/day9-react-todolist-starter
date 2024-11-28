@@ -4,7 +4,7 @@ import TodoGroup from "./TodoGroup";
 const TodoList = () => {
   return (
     <>
-      <div>This is the TodoList Component.</div>
+      <h2>Todo List</h2>
       <TodoGroup />
       <TodoGenerator />
     </>

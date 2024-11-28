@@ -4,5 +4,13 @@ export const initialState = [
 ];
 
 export const todoReducer = (state, action) => {
-  return state;
+
+  const {type, text} = action
+
+  switch (type) {
+    case 'ADD':
+      return [...state, {id: Math.random(), text: text, done: false}]
+    default:
+      return state
+  }
 };

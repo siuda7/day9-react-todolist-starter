@@ -1,0 +1,9 @@
+.todo-generator{
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+
+.todo-generator-btn {
+    background-color: red;
+}

@@ -1,7 +1,23 @@
 .todo-item {
     display: flex;
     justify-content: space-between;
-    width: 450px;
+    width: 40%;
+}
+
+.todo-item > a {
+    border-style: solid; 
+    border-color: black;
+    padding: 25px;
+    width: 60%
+}
+
+.todo-item > button {
+    width: 20%;
+}
+
+.todo-item-btn {
+    background-color: blue;
+    border-radius: 10px;
 }
 
 .text-cross {

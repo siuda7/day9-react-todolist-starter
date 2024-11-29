@@ -1,5 +1,6 @@
 import { useState, useContext } from "react"
 import { TodoContext } from "../App"
+import './TodoGenerator.css'
 
 const TodoGenerator = () => {
 
@@ -12,17 +13,17 @@ const TodoGenerator = () => {
     }
 
     const handleAdd = () => {
-        if (text !== '') {
+        if (text.trim() !== '') {
             dispatch({type: 'ADD', text: text})
             setText('')
         }
     }
 
     return (
-        <>
+        <div className="todo-generator">
             <input type="text" value={text} onChange={handleTextChange}/>
-            <button onClick={handleAdd}>Add</button>
-        </>
+            <button className="todo-generator-btn" onClick={handleAdd}>Add</button>
+        </div>
     )
 }
 

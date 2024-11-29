@@ -1,6 +1,5 @@
 export const initialState = [
-  {id: Math.random(), text: "the first todo", done: false},
-  {id: Math.random(), text: "the second todo", done: false},
+
 ];
 
 export const todoReducer = (state, action) => {
@@ -9,7 +8,10 @@ export const todoReducer = (state, action) => {
     case 'ADD':
       return [...state, {id: Math.random(), text: action.text, done: false}]
     case 'DELETE':
-      return [...state.filter((todo) => todo.id !== action.id)]
+      return state.filter((todo) => todo.id !== action.id)
+    case 'TOGGLE':
+      return state.map(todo => 
+        todo.id === action.id ? {...todo, done: !todo.done} : todo)
     default:
       return state
   }

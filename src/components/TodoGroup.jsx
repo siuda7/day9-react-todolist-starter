@@ -10,7 +10,7 @@ const TodoGroup = () => {
     return (
         <div className="todo-group">
             {
-                todoList.length !== 0 ? 
+                todoList?.length !== 0 ? 
                     todoList.map(todo => <TodoItem key={Math.random()} todo={todo}/>) : 
                 <h3>Add the things you need to do today</h3>
             }

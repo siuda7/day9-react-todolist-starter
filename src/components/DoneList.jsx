@@ -4,10 +4,8 @@ import { TodoContext } from "../App";
 const DoneList = () => {
 
     const {state} =  useContext(TodoContext)
-    console.log(state)
 
     const doneList = state.filter(todo => todo.done)
-    console.log(doneList)
 
     return (
         <div>

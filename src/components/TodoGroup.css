@@ -1,8 +1,10 @@
 .todo-group {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    margin: 25px
+    width: 100%;
+    height: calc(100vh - 500px);
+    margin: 20px
 }

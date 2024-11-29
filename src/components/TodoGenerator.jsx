@@ -1,5 +1,6 @@
 import { useState, useContext } from "react"
 import { TodoContext } from "../App"
+import { addTodo } from "../api/todo";
 import './TodoGenerator.css'
 
 const TodoGenerator = () => {
@@ -12,9 +13,11 @@ const TodoGenerator = () => {
         setText(event.target.value)
     }
 
-    const handleAdd = () => {
+    const handleAdd = async () => {
         if (text.trim() !== '') {
-            dispatch({type: 'ADD', text: text})
+            await addTodo(text)
+                .then(todo => dispatch({type: 'ADD', payload: todo}))
+            //dispatch({type: 'ADD', text: text})
             setText('')
         }
     }

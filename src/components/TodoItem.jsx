@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { TodoContext } from "../App"
 import './TodoItem.css'
-import { deleteTodo } from '../api/todo'
+import { deleteTodo, updateTodo } from '../api/todo'
 
 const TodoItem = (props) => {
 
@@ -10,7 +10,9 @@ const TodoItem = (props) => {
     const { todo } = props
 
     const handleTextClick = () => {
-        dispatch({type: 'TOGGLE', id: todo.id})
+        updateTodo(todo.id, {done: !todo.done})
+            .then(todo => dispatch({type: 'TOGGLE', id: todo.id}))
+        // dispatch({type: 'TOGGLE', id: todo.id})
     }
 
     const handleDeleteItem = async () => {

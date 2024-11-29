@@ -21,6 +21,12 @@ export const addTodo = async (text) => {
         .then(response => response.data)
 }
 
+export const updateTodo = async (id, todo) => {
+
+    return instance.put("/todos/"+id, todo)
+    .then(response => response.data)
+}
+
 export const deleteTodo = async (id) => {
     return instance.delete("/todos/"+id) 
         .then(response => response.data)

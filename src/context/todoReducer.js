@@ -1,5 +1,5 @@
 export const initialState = [
-
+  {id: Math.random(), text: "Yo!", done: true}
 ];
 
 export const todoReducer = (state, action) => {

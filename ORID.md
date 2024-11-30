@@ -1,10 +1,7 @@
-O: I learn about useContext and this hook allows you to access context values directly in your components without the need to pass props down through every level of the component tree. It simplifies state management when you need to share data across multiple components. And useReducers hook is used for managing state in a more predictable way, especially when dealing with complex state logic. It works similarly to Redux by using a reducer function that takes the current state and an action, then returns a new state
+O: I learned about calling backend APIs using axios in React and using the Ant Design component library for UI components.
 
-R: Fun
+R: I found it exciting to learn these new technologies.
 
-I: The way useContext eliminates the need for prop drilling, making your components cleaner and more maintainable.
-How useReducer provides a structured way to handle state transitions, making your state logic more predictable and easier to debug. Understanding the reducer function: It requires a good grasp of how to structure your state and actions. Integrating useContext with useReducer: Combining these hooks can be tricky at first, but it offers a powerful way to manage global state with complex logic
+I: I learned how axios simplifies making HTTP requests to backend APIs, allowing for easy integration with RESTful services. I also discovered the versatility of axios in handling different types of requests (GET, POST, PUT, DELETE) and managing responses. Additionally, I explored the ease of using Ant Design components to create a polished and professional-looking user interface. The wide range of pre-built components provided by Ant Design can significantly speed up the development process.
 
-D: Implement useContext: Use it to manage global state or shared data in your React applications, such as user authentication status, theme settings, or language preferences.
-Use useReducer: Apply it in components where state logic is complex, such as forms with multiple fields, complex UI interactions, or managing state in a way that requires clear and predictable updates.
-Combine useContext and useReducer: For a robust state management solution, use useContext to provide the state and dispatch function from useReducer to your components, allowing them to access and update the state as needed.
+D: I plan to implement axios in my projects to make HTTP requests to backend APIs, handle responses, and manage errors effectively. I will use Ant Design components in my React applications to create a consistent and visually appealing UI. Furthermore, I will combine axios and Ant Design by fetching data from the backend using axios and displaying it using Ant Design components, ensuring a seamless integration between the frontend and backend.

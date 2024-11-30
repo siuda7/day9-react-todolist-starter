@@ -25,12 +25,15 @@ const TodoList = () => {
 
   return (
     <div className="todo-list">
-      <h2>Todo List</h2>
-      { 
+      <div>
+        <h2>Todo List</h2>
+        </div>
+        { 
         loading ? 
           <Spin indicator={<LoadingOutlined spin />} size="large" spinning={loading}/> 
           :
-          <TodoGroup />}
+          <TodoGroup />
+        }
       <TodoGenerator />
     </div>
   );

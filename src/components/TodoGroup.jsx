@@ -26,10 +26,11 @@ const TodoGroup = () => {
                         })
                         :  
                         <h3>Add the things you need to do today</h3>
+                        /* Math.ceil(todoList?.length / PAGE_SIZE) * PAGE_SIZE */
                 }
                 <Pagination 
                     defaultCurrent={1} 
-                    total={Math.ceil(todoList?.length / PAGE_SIZE) * PAGE_SIZE} 
+                    total={todoList?.length} 
                     pageSize={PAGE_SIZE} 
                     current={page} 
                     onChange={onPageChange} />

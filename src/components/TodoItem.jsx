@@ -10,7 +10,7 @@ const TodoItem = (props) => {
     const { todo } = props
 
     const handleTextClick = () => {
-        updateTodo(todo.id, {done: !todo.done})
+        updateTodo(todo.id, {id: todo.id, text: todo.text, done: !todo.done})
             .then(todo => dispatch({type: 'TOGGLE', id: todo.id}))
         // dispatch({type: 'TOGGLE', id: todo.id})
     }

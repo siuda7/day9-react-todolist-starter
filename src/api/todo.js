@@ -1,9 +1,5 @@
-import axios from "axios";
+import instance from "./interceptor";
 
-const instance = axios.create({
-    baseURL: 'https://67495c88868020296630ab6c.mockapi.io/api/v1',
-    timeout: 5000
-});
 
 export const getTodoList = async () => {
     return instance.get("/todos")

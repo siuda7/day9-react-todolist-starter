@@ -37,7 +37,8 @@ const TodoGenerator = () => {
 
     return (
         <div className="todo-generator">
-            <Modal title="Are you sure?" 
+            <Modal 
+                title="Are you sure?" 
                 open={isModalOpen} 
                 onOk={handleOk} 
                 onCancel={handleCancel}>
